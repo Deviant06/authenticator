@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Certificate Management</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Certificate Management System</h1>
+            <p>Admin Panel</p>
+        </header>
+
+        <main>
+            <div id="loginForm" class="admin-form">
+                <h2>Admin Login</h2>
+                <input type="text" id="username" placeholder="Username">
+                <input type="password" id="password" placeholder="Password">
+                <button id="loginBtn">Login</button>
+            </div>
+
+            <div id="adminPanel" class="admin-panel hidden">
+                <div class="admin-controls">
+                    <h2>Generate New Certificate</h2>
+                    <input type="text" id="recipientName" placeholder="Recipient Name">
+                    <input type="text" id="courseTitle" placeholder="Course/Achievement Title">
+                    <input type="date" id="issueDate">
+                    <button id="generateBtn">Generate Certificate</button>
+                </div>
+
+                <div class="generated-certificate hidden" id="generatedCertificate">
+                    <h3>Generated Certificate Details</h3>
+                    <div id="certificatePreview"></div>
+                    <div id="qrCodeContainer"></div>
+                    <button id="downloadQR">Download QR Code</button>
+                    <button id="saveCertificate">Save Certificate</button>
+                </div>
+
+                <div class="certificate-list">
+                    <h3>Recent Certificates</h3>
+                    <div id="certificatesList"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p><a href="index.html">Back to Verification Page</a></p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="public/js/admin.js"></script>
+</body>
+</html> 

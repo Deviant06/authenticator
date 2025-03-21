@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Verification System</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Certificate Verification System</h1>
+            <p>Verify the authenticity of your certificate</p>
+        </header>
+
+        <main>
+            <div class="verification-box">
+                <div class="search-container">
+                    <input type="text" id="certificateId" placeholder="Enter Certificate ID">
+                    <button id="verifyBtn">Verify Certificate</button>
+                </div>
+
+                <div id="result" class="result-container hidden">
+                    <h2>Certificate Details</h2>
+                    <div id="certificateDetails"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Admin? <a href="admin.html">Login here</a></p>
+        </footer>
+    </div>
+
+    <script src="public/js/verify.js"></script>
+</body>
+</html>
